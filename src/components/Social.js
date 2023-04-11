@@ -41,7 +41,7 @@ export default function Social() {
           <FaGithub />
         </Icon>
         <Icon
-          href="https://www.linkedin.com/in/sofia-sosa"
+          href="https://www.linkedin.com/in/sosa-sofia"
           target="_blank"
           rel="noreferrer"
         >
