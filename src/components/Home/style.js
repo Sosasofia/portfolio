@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { device } from "utils/data";
+import { device, color } from "utils/data";
 
 
 const Container = styled(motion.ul)`
@@ -9,22 +9,25 @@ const Container = styled(motion.ul)`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  list-style-type: none;
-  //padding-top: 19rem;
   height: 90vh;
   padding-top: 6rem;
   
-  p {
-    margin-bottom: 10rem;
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: ${color.dark};
+    size: 10rem;
   }
-
+  
   @media ${device.laptop} {
     margin-bottom: 10rem;
   }
   
 `;
 
-const Button = styled(motion.a)`
+const Button = styled.a`
   width: 18rem;
   height: 5rem;
   padding: 1rem;
@@ -34,7 +37,6 @@ const Button = styled(motion.a)`
   box-shadow: 6px 7px 2px -3px rgb(84 76 65 / 50%);
   display: inline-flex;
   align-items: center;
-  justify-content: space-around;
   gap: 1rem;
   transition: all 0.4s ease 0s;
   color: #454545;
@@ -51,5 +53,27 @@ const Button = styled(motion.a)`
   }
 `;
 
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
-export { Container, Button };
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
+`
+
+const List = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin: 9rem 0 4rem 0;
+
+  @media ${device.laptop} {
+    gap: 2rem;
+  }
+`;
+
+
+export { Container, Button, Buttons, List };

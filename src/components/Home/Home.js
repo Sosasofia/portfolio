@@ -1,8 +1,7 @@
 import React from "react";
-import { AiOutlineDownload } from "react-icons/ai";
-import { Container, Button } from "./style";
-import Image from "../Image";
-import Social from "../Social";
+import { AiOutlineDownload, AiOutlinePhone, AiOutlineEnvironment } from "react-icons/ai";
+import { Container, Button, Buttons } from "./style";
+import Skills from "./Skills";
 
 export default function Home() {
   return (
@@ -12,17 +11,27 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <Image></Image>
       <h1>Sosa Sofía</h1>
-      <p>Front-end developer and student.</p>
-      <Social></Social>
-      <Button
-        href="https://drive.google.com/drive/folders/1zHots5C-1JyvfAyq6q8MhxC2yAfMOyXY?usp=sharing"
-        target="_blank"
-      >
-        <AiOutlineDownload size="3rem" />
-        Download CV
-      </Button>
+      <h2>Frontend developer</h2>
+      <div className="location">
+        <AiOutlineEnvironment size="2rem" />
+        <p>Buenos Aires, Argentina</p>
+      </div>
+      
+      <Skills />
+      <Buttons>
+        <Button href="#contact">
+          <AiOutlinePhone size="3rem"/>
+          Contact me
+        </Button>
+        <Button
+          href="https://drive.google.com/drive/folders/1zHots5C-1JyvfAyq6q8MhxC2yAfMOyXY?usp=sharing"
+          target="_blank"
+        >
+          <AiOutlineDownload size="3rem" />
+          Download CV
+        </Button>
+      </Buttons>
     </Container>
   );
 }

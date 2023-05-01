@@ -7,13 +7,17 @@ export default createGlobalStyle`
     text-align: center;
   }
 
-  h2 {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h3 {
     font-size: 3rem;
     padding: 25px;
     margin-top: 50px;
   }
 
-  h3 {
+  h4 {
     font-size: 2.5rem;
   }
 
@@ -25,15 +29,19 @@ export default createGlobalStyle`
   @media ${device.laptop} {
 
     h1 {
-      font-size: 7rem;
+      font-size: 10rem;
+    }
+
+    h2 {
+      font-size: 4rem;
     }
     
-    h2 {
+    h3 {
       font-size: 5.5rem;
       color: #544C41;
     }
 
-    h3 {
+    h4 {
       font-size: 3.5rem;
     }
 
