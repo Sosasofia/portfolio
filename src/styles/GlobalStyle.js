@@ -18,7 +18,8 @@ export default createGlobalStyle`
   }
 
   h4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 50px 0;
   }
 
   p {
@@ -38,11 +39,11 @@ export default createGlobalStyle`
     
     h3 {
       font-size: 5.5rem;
-      color: #544C41;
     }
 
     h4 {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
+      margin: 100px 0 50px 0;
     }
 
     p {
