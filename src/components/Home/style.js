@@ -70,6 +70,15 @@ const List = styled.div`
   gap: 1rem;
   margin: 9rem 0 4rem 0;
 
+  .skillIcon {
+    transition: all .6s;
+  }
+
+  .skillIcon:hover {
+    transform: translateY(-7px);
+    fill: black;
+  }
+
   @media ${device.laptop} {
     gap: 2rem;
   }
