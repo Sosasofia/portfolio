@@ -22,6 +22,10 @@ export default createGlobalStyle`
     margin: 50px 0;
   }
 
+  h5 {
+    font-size: 2.5rem;
+  }
+
   p {
     font-size: 1.7rem;
   }
@@ -44,6 +48,10 @@ export default createGlobalStyle`
     h4 {
       font-size: 2.5rem;
       margin: 100px 0 50px 0;
+    }
+
+    h5 {
+      font-size: 3.5rem;
     }
 
     p {

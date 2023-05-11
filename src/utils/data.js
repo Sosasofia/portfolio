@@ -1,56 +1,71 @@
 export const projects = [
   {
+    title: "Giffy",
+    description: "The app consumes data from the Giphy API.",
+    image: "/images/giffy.png",
+    github: "https://github.com/Sosasofia/giffy",
+    demo: "https://giffy-virid.vercel.app/",
+    technologies: "React | React Router",
+  },
+  {
+    title: "NotesApp",
+    description: "Fullstack app that consumes data from a REST API.",
+    image: "/images/Notes-App.png",
+    github: "https://github.com/Sosasofia/notes-front",
+    demo: "https://notes-front-phi.vercel.app/home",
+    technologies: "React | Redux | Tailwind",
+  },
+  {
     title: "Pokedex",
-    description: "Simple Pokedex using React, consuming pokeapi.co API",
+    description: "Pokedex using React, consuming pokeapi.co API.",
     image: "/images/pokedex.png",
     github: "https://github.com/Sosasofia/pokedex",
     demo: "https://pokedex-sosasofia.vercel.app/",
-    stack: ["React", "Mobile first"],
-  },
-  {
-    title: "Signup form",
-    description:
-      "Mobile-first solution to the Intro component with sign up form challenge on Frontend Mentor.",
-    image: "/images/signup.png",
-    github:
-      "https://github.com/Sosasofia/Responsive-signup-form-with-HTML5-CSSS3-JS-SCSS",
-    demo: "https://sosasofia.github.io/Responsive-signup-form-with-HTML5-CSSS3-JS-SCSS",
-    stack: [],
-  },
-  {
-    title: "Time tracking dashboard",
-    description: "Solution to Frontend Mentor challenge with REACT.",
-    image: "/images/time-tracking.png",
-    github: "https://github.com/Sosasofia/react-time-tracking",
-    demo: "https://react-time-tracking.vercel.app/",
-    stack: [],
+    technologies: "React | Styled Components",
   },
   {
     title: "Landing page",
     description:
-      "Solution to Frontend Mentor challenge. Using HTML, CSS/SCSS and Javascript.",
+      "Solution to Frontend Mentor challenge.",
     image: "/images/landing-page.png",
     github: "https://github.com/Sosasofia/loopstudios-landing-page",
     demo: "https://loopstudios-landing-page-sosasofia.vercel.app/",
-    stack: [],
+    technologies: "HTML | CSS/SCSS | Javascript",
   },
-  {
-    title: "Currency converter",
-    description:
-      "Simple currency exchange rate converter usign HTML, CSS and Javascript.",
-    image: "/images/currency-converter.png",
-    github: "https://github.com/Sosasofia/currency-converter",
-    demo: "https://sosasofia.github.io/currency-converter/",
-    stack: [],
-  },
-  {
-    title: "Countdown",
-    description: "Countdown timer using HTML, CSS and Javascript.",
-    image: "/images/countdown.png",
-    github: "https://github.com/Sosasofia/countdown-timer",
-    demo: "https://sosasofia.github.io/countdown-timer/",
-    stack: [],
-  },
+  // {
+  //   title: "Signup form",
+  //   description:
+  //     "Mobile-first solution to the Intro component with sign up form challenge on Frontend Mentor.",
+  //   image: "/images/SignUp.png",
+  //   github:
+  //     "https://github.com/Sosasofia/Responsive-signup-form-with-HTML5-CSSS3-JS-SCSS",
+  //   demo: "https://sosasofia.github.io/Responsive-signup-form-with-HTML5-CSSS3-JS-SCSS",
+  //   technologies: "React",
+  // },
+  // {
+  //   title: "Time tracking dashboard",
+  //   description: "Solution to Frontend Mentor challenge with REACT.",
+  //   image: "/images/Time-tracking-dashboard.png",
+  //   github: "https://github.com/Sosasofia/react-time-tracking",
+  //   demo: "https://react-time-tracking.vercel.app/",
+  //   technologies: "React",
+  // },
+  // {
+  //   title: "Currency converter",
+  //   description:
+  //     "Simple currency exchange rate converter usign HTML, CSS and Javascript.",
+  //   image: "/images/currency-converter.png",
+  //   github: "https://github.com/Sosasofia/currency-converter",
+  //   demo: "https://sosasofia.github.io/currency-converter/",
+  //   technologies: "HTML | CSS | Javascript",
+  // },
+  // {
+  //   title: "CRUD API",
+  //   description: "Simple REST API using Node.js/Express/Moongose.",
+  //   github: "https://github.com/Sosasofia/CRUD-API-NODE",
+  //   demo: "https://sosasofia.github.io/countdown-timer/",
+  //   technologies: "Node.js | Express | Moongose",
+  // }
 ];
 
 const size = {
