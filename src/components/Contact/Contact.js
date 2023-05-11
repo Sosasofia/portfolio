@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <FadeIn>
       <Container id="contact">
-        <h2>Contact</h2>
+        <h3>Contact</h3>
         <ContactForm></ContactForm>        
         <Social></Social>
       </Container>

@@ -96,3 +96,33 @@ export const color = {
   color2: "#544C41",
   color3: "#625A4F",
 };
+
+export const emailJsVariables = {
+  service_id: process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  template_id: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  user_id: process.env.REACT_APP_EMAILJS_USER_ID,
+};
+
+export const registerOptions = {
+  name: {
+    required: "Name is required",
+    minLength: {
+      value: 10,
+      message: "Message must have at least 10 characters",
+    },
+  },
+  email: {
+    required: "Email is required",
+    pattern: {
+      value: /\S+@\S+\.\S+/,
+      message: "Entered value does not match email format",
+    },
+  },
+  message: {
+    required: "Message is required",
+    minLength: {
+      value: 30,
+      message: "Message must have at least 30 characters",
+    },
+  },
+};

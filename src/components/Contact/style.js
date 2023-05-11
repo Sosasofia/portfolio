@@ -31,9 +31,8 @@ const Form = styled.form`
 const commonStyles = `
   border: none;
   border-radius: 3px;
-  border: 1px solid #544C41;
   border: 1px solid #454545;
-
+  font-size: 2rem;
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -60,11 +59,11 @@ const Button = styled.input`
   width: 15rem;
   height: 5rem;
   letter-spacing: 2px;
+  font-size: 2rem;
   border: 2px solid #544c41;
   border: 2px solid #454545;
 
   cursor: pointer;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   box-shadow: 6px 7px 2px -3px rgb(84 76 65 / 50%);
   transition: all 0.3s ease 0s;
   background-color: #f3e9dc;
@@ -96,4 +95,13 @@ const Error = styled.div`
   }
 `;
 
-export { Error, Form, Input, Textarea, Button, Container };
+
+const Alert = styled.div`
+  background-color: #c0c2d7;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+`;
+
+export { Error, Form, Input, Textarea, Button, Container, Alert };

@@ -1,35 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { BiErrorCircle } from "react-icons/bi";
-import { Button, Error, Form, Input, Textarea } from "./style.js";
+import { Button, Error, Form, Input, Textarea, Alert } from "./style.js";
+import {  emailJsVariables, registerOptions } from "utils/data";
 
-const registerOptions = {
-  name: {
-    required: "Name is required",
-    minLength: {
-      value: 10,
-      message: "Message must have at least 10 characters",
-    },
-  },
-  email: {
-    required: "Email is required",
-    pattern: {
-      value: /\S+@\S+\.\S+/,
-      message: "Entered value does not match email format",
-    },
-  },
-  message: {
-    required: "Message is required",
-    minLength: {
-      value: 30,
-      message: "Message must have at least 30 characters",
-    },
-  },
-};
 
 export default function ContactForm() {
   const form = useRef();
+  const [status, setStatus] = useState("");
+  const [message, setMessage] = useState("");
 
   const {
     register,
@@ -37,31 +17,43 @@ export default function ContactForm() {
     reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
 
   const sendEmail = (data, e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_ms1ms1p",
-        "template_hrjrfif",
+        emailJsVariables.service_id,
+        emailJsVariables.template_id,
         form.current,
-        "Cik3jXZ_FLOBo9C88"
+        emailJsVariables.user_id
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setStatus("SUCCESS");
+          setMessage("Message sent successfully!");
         },
         (error) => {
-          console.log(error.text);
+          setStatus("FAILED");
+          setMessage("Something went wrong, please try again!");
         }
       );
       reset()
   };
 
+  useEffect(() => {
+    if(status === 'SUCCESS' || status === 'FAILED') {
+      setTimeout(() => {
+        setStatus('');
+        setMessage('');
+      }, 3000);
+    }
+  }, [status]);
+
+
   return (
     <Form id="contact-form" onSubmit={handleSubmit(sendEmail)} ref={form}>
+      {status && renderAlert(message)}
       <Input
         type="text"
         name="user_name"
@@ -98,3 +90,8 @@ export default function ContactForm() {
     </Form>
   );
 }
+
+
+const renderAlert = (message) => (
+  <Alert>{message}</Alert>
+);
