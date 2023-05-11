@@ -1,30 +1,25 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { List, Item } from "./style";
-import {
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoJavascript,
-  IoLogoSass,
-  IoLogoNodejs,
-} from "react-icons/io";
-import { SiStyledcomponents, SiTailwindcss, SiRedux, SiVite, SiExpress } from "react-icons/si";
-import { FaGithub, FaReact } from "react-icons/fa";
-
+import { 
+  SiJavascript, SiHtml5, SiNodedotjs, SiGithub, 
+  SiSass, SiCss3, SiReact, SiStyledcomponents, 
+  SiTailwindcss, SiRedux, SiVite, SiExpress 
+} from "react-icons/si";
 
 export const skills = [
-  {label: "HMTL5", icon: <IoLogoHtml5 />},
-  {label: "CSS", icon: <IoLogoCss3 />},
-  {label: "Javascript", icon: <IoLogoJavascript />},
-  {label: "Saas", icon: <IoLogoSass />},
+  {label: "HMTL5", icon: <SiHtml5 />},
+  {label: "CSS", icon: <SiCss3 />},
+  {label: "Javascript", icon: <SiJavascript />},
+  {label: "Saas", icon: <SiSass />},
   {label: "Styled Components", icon: <SiStyledcomponents />},
-  {label: "React", icon:<FaReact/>},
+  {label: "React", icon: <SiReact/>},
   {label: "Tailwind", icon: <SiTailwindcss />},
   {label: "Redux", icon: <SiRedux />},
-  {label: "Node.js", icon: <IoLogoNodejs />},
+  {label: "Node.js", icon: <SiNodedotjs />},
   {label: "Express", icon: <SiExpress />},
   {label: "Vite", icon: <SiVite />},
-  {label: "Github", icon: <FaGithub />},
+  {label: "Github", icon: <SiGithub />},
 ]
          
          
@@ -34,9 +29,9 @@ export default function Skills() {
       value={{ color: "#454545", size: "5rem", className: "skillIcon" }}
     >
       <List>
-      {skills.map(skill => {
+      {skills.map((skill, index) => {
         return (
-          <Item>
+          <Item key={index}>
             {skill.icon}
             <span>{skill.label}</span>
           </Item>

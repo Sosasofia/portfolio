@@ -14,10 +14,11 @@ const Container = styled(motion.div)`
   }
 `;
 
-const List = styled.div`
+const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  list-style: none;
 
   @media ${device.laptop} {
     font-size: 2.5rem;
@@ -25,7 +26,7 @@ const List = styled.div`
   }
 `;
 
-const Item = styled.div`
+const Item = styled.li`
   transition: all 0.4s ease 0s;
   display: flex;
   flex-direction: column;
