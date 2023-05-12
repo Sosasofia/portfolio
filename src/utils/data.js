@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Giffy",
     description: "The app consumes data from the Giphy API.",
-    image: "/images/giffy.png",
+    image: "/images/Giffy.png",
     github: "https://github.com/Sosasofia/giffy",
     demo: "https://giffy-virid.vercel.app/",
     technologies: "React | React Router",
