@@ -5,7 +5,7 @@ export const projects = [
     image: "/images/Giffy.png",
     github: "https://github.com/Sosasofia/giffy",
     demo: "https://giffy-virid.vercel.app/",
-    technologies: "React | React Router",
+    technologies: "React | React Router | Styled-Components",
   },
   {
     title: "NotesApp",
