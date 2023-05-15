@@ -18,6 +18,7 @@ const Container = styled.div`
   .stack {
     font-weight: bolder;
     color: black;
+    font-size: 1.5rem;
   }  
 
   @media ${device.laptop} {
