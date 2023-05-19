@@ -32,9 +32,9 @@ export default function Projects() {
         <h3>Projects</h3>
         <List>
           {
-            projects.map((project, index) => {return (
+            projects.map((project, index) => (
               <Project key={index} data={project} />
-            )})
+            ))
           }
         </List>
       </Container>
